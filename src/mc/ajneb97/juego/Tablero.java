@@ -158,42 +158,40 @@ public class Tablero {
 		}
 		
 		if(tipo.equals("torre")) {
-			l.getBlock().setType(m);
-			l.clone().add(0,1,0).getBlock().setType(m);
-			Location l2 = l.clone().add(0,2,0);
-			Utilidades.setSkullBlock(l2, "5e193aa2-292e-43c6-b92b-e823f6e0cc1e", "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjQ1NTlkNzU0NjRiMmU0MGE1MThlNGRlOGU2Y2YzMDg1ZjBhM2NhMGIxYjcwMTI2MTRjNGNkOTZmZWQ2MDM3OCJ9fX0=", rot);
-		}else if(tipo.equals("caballo")) {
-			l.getBlock().setType(m);
-			l.clone().add(0,1,0).getBlock().setType(m);
-			Location l2 = l.clone().add(0,2,0);
-			Utilidades.setSkullBlock(l2, "022202fd-9546-4492-b8b6-b768e95701c2", "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2JiNGIyODg5OTFlZmI4Y2EwNzQzYmVjY2VmMzEyNThiMzFkMzlmMjQ5NTFlZmIxYzljMThhNDE3YmE0OGY5In19fQ==", rot);
-		}else if(tipo.equals("alfil")) {
-			l.getBlock().setType(m);
-			l.clone().add(0,1,0).getBlock().setType(m);
-			Location l2 = l.clone().add(0,2,0);
 			if(color.equals("b")) {
-				Utilidades.setSkullBlock(l2, "eb1fc1a8-763e-442f-bf10-302b3beebb32", "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTI2Yjc3MjMyOWNmMzJmODY0M2M0OTI4NjI2YjZhMzI1MjMzZmY2MWFhOWM3NzI1ODczYTRiZDY2ZGIzZDY5MiJ9fX0=", rot);
+				l.getBlock().setType(m).customModelData(101);
 			}else {
-				Utilidades.setSkullBlock(l2, "c766a367-5d10-4b8f-a2fe-d3796bfbfcc1", "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDdmNTc2NmQyOTI4ZGMwZGYxYjM0MDRjM2JkMDczYzk0NzZkMjZjODA1NzNiMDMzMmU3Y2NlNzNkZjE1NDgyYSJ9fX0=", rot);
+				l.getBlock().setType(m).customModelData(107);
+			}
+		}else if(tipo.equals("caballo")) {
+			if(color.equals("b")) {
+				l.getBlock().setType(m).customModelData(102);
+			}else {
+				l.getBlock().setType(m).customModelData(108);
+			}
+		}else if(tipo.equals("alfil")) {
+			if(color.equals("b")) {
+				l.getBlock().setType(m).customModelData(103);
+			}else {
+				l.getBlock().setType(m).customModelData(109);
 			}
 		}else if(tipo.equals("rey")) {
-			l.getBlock().setType(m);
-			l.clone().add(0,1,0).getBlock().setType(m);
-			l.clone().add(0,2,0).getBlock().setType(m);
-			l.clone().add(0,3,0).getBlock().setType(Material.DIAMOND_BLOCK);
-		}else if(tipo.equals("reina")) {
-			l.getBlock().setType(m);
-			l.clone().add(0,1,0).getBlock().setType(m);
-			l.clone().add(0,2,0).getBlock().setType(m);
-			Location l2 = l.clone().add(0,3,0);
-			Utilidades.setSkullBlock(l2, "fdea850d-ae8b-4e10-8b03-6883494ae266", "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTRiZjg5M2ZjNmRlZmFkMjE4Zjc4MzZlZmVmYmU2MzZmMWMyY2MxYmI2NTBjODJmY2NkOTlmMmMxZWU2In19fQ==", rot);
-		}else if(tipo.equals("peon")) {
-			l.getBlock().setType(m);
-			Location l2 = l.clone().add(0,1,0);
 			if(color.equals("b")) {
-				Utilidades.setSkullBlock(l2, "eb1fc1a8-763e-442f-bf10-302b3beebb32", "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTI2Yjc3MjMyOWNmMzJmODY0M2M0OTI4NjI2YjZhMzI1MjMzZmY2MWFhOWM3NzI1ODczYTRiZDY2ZGIzZDY5MiJ9fX0=", rot);
+				l.getBlock().setType(m).customModelData(104);
 			}else {
-				Utilidades.setSkullBlock(l2, "c766a367-5d10-4b8f-a2fe-d3796bfbfcc1", "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDdmNTc2NmQyOTI4ZGMwZGYxYjM0MDRjM2JkMDczYzk0NzZkMjZjODA1NzNiMDMzMmU3Y2NlNzNkZjE1NDgyYSJ9fX0=", rot);
+				l.getBlock().setType(m).customModelData(110);
+			}
+		}else if(tipo.equals("reina")) {
+			if(color.equals("b")) {
+				l.getBlock().setType(m).customModelData(105);
+			}else {
+				l.getBlock().setType(m).customModelData(111);
+			}
+		}else if(tipo.equals("peon")) {
+			if(color.equals("b")) {
+				l.getBlock().setType(m).customModelData(100);
+			}else {
+				l.getBlock().setType(m).customModelData(106);
 			}
 		}
 	}
